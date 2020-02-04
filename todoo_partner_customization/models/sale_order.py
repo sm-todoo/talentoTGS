@@ -6,8 +6,8 @@ from odoo import api, models, _
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    @api.multi
-    def action_confirm(self):
+    @api.model
+    def action_confirm(self,id):
         flag = False
         if self.partner_id.name and self.partner_id.street and \
                 self.partner_id.city and self.partner_id.country_id and \

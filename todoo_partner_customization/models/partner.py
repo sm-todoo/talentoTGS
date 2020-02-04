@@ -51,12 +51,12 @@ class ResPartner(models.Model):
     field_11 = fields.Many2one('address.code')
     field_12 = fields.Integer()
     street = fields.Char()
-    name = fields.Char(default=lambda self:self.first_name)
+    name = fields.Char(default=lambda self: self.first_name)
     first_name = fields.Char()
     middle_name = fields.Char()
     last_name = fields.Char()
     second_last_name = fields.Char()
-    nit = fields.Char(string='NIT', size=11)
+    nit = fields.Char(string='NIT', size=9)
     dv = fields.Selection(
         [('0', '0'), ('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'),
          ('5', '5'), ('6', '6'), ('7', '7'), ('8', '8'), ('9', '9')],
@@ -85,11 +85,6 @@ class ResPartner(models.Model):
         for record in self:
             if record.nit and re.match(pattern, record.nit) is None:
                 raise ValidationError(_("NIT value must be a numerical."))
-deveploment
-    @api.onchange('nit','dv')
-    def onchange_Concatenar_(self):
-        self.vat ="%s%s" % (
-            self.nit,self.dv)                  
 
     @api.onchange('l10n_co_edi_large_taxpayer')
     def _onchange_gran_contrib(self):

@@ -9,6 +9,7 @@ class CiiuValue(models.Model):
 
     code = fields.Char(required=True)
     name = fields.Char(string='Description', required=True)
+    rate = fields.Float(string="Rate of CIIU",required=True)
     company_id = fields.Many2one(
         'res.company', string='Company', change_default=True,
         required=True,

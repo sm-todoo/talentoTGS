@@ -6,8 +6,8 @@ from odoo import api, models, _
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
 
-    @api.multi
-    def button_confirm(self):
+    @api.model
+    def button_confirm(self,PurchaseOrder):
         flag = False
         if self.partner_id.name and self.partner_id.street and \
                 self.partner_id.city and self.partner_id.country_id and \
@@ -28,7 +28,7 @@ class PurchaseOrder(models.Model):
                 'res_model': 'res.partner.wizard',
                 'target': 'new',
                 'view_mode': 'form',
-                'view_type': 'form',
+                #'view_type': 'form',
                 'context': {
                     'active_id': self.id,
                     'active_model': 'purchase.order',

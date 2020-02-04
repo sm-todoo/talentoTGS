@@ -139,7 +139,7 @@ class ResPartnerWizard(models.TransientModel):
         if self.l10n_co_edi_simplified_regimen:
             self.l10n_co_edi_large_taxpayer = False
 
-    @api.multi
+    @api.model
     def action_save(self):
         if not self.l10n_co_edi_large_taxpayer and not self.l10n_co_edi_simplified_regimen:
             raise ValidationError(_('Large taxpayer or Simplified Regimen must be selected'))

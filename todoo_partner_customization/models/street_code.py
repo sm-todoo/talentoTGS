@@ -8,9 +8,9 @@ class StreetCode(models.Model):
     _description = 'Street Code'
     _rec_name = 'name'
 
-    @api.multi
+    @api.model
     @api.depends('code', 'name')
-    def name_get(self):
+    def _name_get(self):
         result = []
         for post in self:
             result.append((post.id, '%s %s' % (post.code, post.name)))
