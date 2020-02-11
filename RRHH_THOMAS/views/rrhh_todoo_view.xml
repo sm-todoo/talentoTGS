@@ -8,7 +8,7 @@
 
 
 
-         <xpath expr="//field[(@name='x_studio_numero_4')]" position="after">
+         <xpath expr="//field[(@name='partner_name')]" position="after">
                 <label for="field_1" string="Dirección de Residencia"/>
                 <div class="o_row oe_edit_only">
                     <field name="field_1" options="{'no_open': True, 'no_create': True}"/>
