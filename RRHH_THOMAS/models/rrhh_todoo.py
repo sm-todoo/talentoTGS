@@ -80,6 +80,9 @@ class Todoo(models.Model):
     field_11 = fields.Char()
     field_12 = fields.Char()
     street = fields.Char()
+    field_12 = fields.Char()
+   
+
 
     name13 = fields.Char(string="Nombre Completo")
     

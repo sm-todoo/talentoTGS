@@ -27,7 +27,9 @@
                   <field name="street"/>
           </xpath>         
 
-
+          <xpath>
+              <field name="prueba" />
+          </xpath>
          
       	</field>
 	</record>
