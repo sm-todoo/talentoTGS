@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_applicant_form_inherit" model="ir.ui.view">
+        <field name="name">hr.applicant.form.inherit</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+
+
+
+         <xpath expr="//field[(@name='partner_name')]" position="after">
+                <label for="field_1" string="Dirección de Residencia"/>
+                <div class="o_row oe_edit_only">
+                    <field name="field_1" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="field_2"/>
+                    <field name="field_3"/>
+                    <field name="field_4" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="field_5"/>
+                    <field name="field_6"/>
+                    <field name="field_7" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="field_8"/>
+                    <field name="field_9" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="field_10"/>
+                    <field name="field_11" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="field_12"/>
+                </div>
+                  <field name="street"/>
+          </xpath>         
+
+
+         
+      	</field>
+	</record>
+</odoo>
+
+
+
