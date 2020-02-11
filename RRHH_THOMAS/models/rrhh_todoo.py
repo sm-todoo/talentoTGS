@@ -77,7 +77,7 @@ class Todoo(models.Model):
     field_8 = fields.Integer(required=True)
     field_9 = fields.Selection(dire)
     field_10 = fields.Char()
-    field_11 = fields.Char(required=True)
+    field_11 = fields.Char()
     field_12 = fields.Char()
     street = fields.Char()
 
