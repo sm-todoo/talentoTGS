@@ -23,15 +23,7 @@ class SurveyQuestion(models.Model):
 class SurveyUserInputLine(models.Model):
     _inherit = 'survey.user_input_line'
 
-    answer_type = fields.Selection([
-        ('text', 'Text'),
-        ('number', 'Number'),
-        ('date', 'Date'),
-        ('free_text', 'Free Text'),
-        ('upload_file', 'Upload file'),
-        ('suggestion', 'Suggestion'),
-        ('list', 'List box'),
-        ('matrix_models', 'Matrix models')], string='Answer Type')
+  
 
     file = fields.Binary('Cargar Archivo.')
    
