@@ -1,5 +1,5 @@
 
-#LFPV - Todoo SAS
+#LFPV
 
 import json
 import logging
@@ -38,7 +38,7 @@ class WebsiteSurveyExtend(Survey):
                 ('user_input_id', '=', user_input_id.id),
                 ('survey_id', '=', survey.id),
                 ('question_id', '=', question.id),
-                ('answer_type', '=', 'Cargar Archivo')
+                ('answer_type', '=', 'upload_file')
             ])
             user_input_line_upload_file.append(user_input_line)
         return request.render('survey.survey_print',
