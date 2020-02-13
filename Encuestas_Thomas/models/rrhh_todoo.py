@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+
+
 from odoo import api, fields, models, tools, SUPERUSER_ID, _
 from odoo.exceptions import AccessError, MissingError, ValidationError, UserError
 import base64
