@@ -53,8 +53,8 @@
     <menuitem
             action="action_address_code"
             id="address_code_menu"
-            parent="root_localization_menu"
-            sequence="1" />
+            parent="crm.crm_menu_config"
+            sequence="7" />
 
 
 
